@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anvil — Everyday tools, forged into one place</title>
+<meta name="description" content="Nineteen fast, private, browser-only tools for text, study, conversion, generation, images, developers, and fun. No sign-up, no server.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%236d63f6%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+<nav class="site-nav" id="siteNav">
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16l4-4 10 10M14 3l7 7-3 3-7-7 3-3zM6 12L3 21l9-3"/></svg>
+      </span>
+      Anvil
+    </a>
+    <div class="nav-links">
+      <a href="#tools">Tools</a>
+      <a href="#text">Text</a>
+      <a href="#study">Study</a>
+      <a href="#developer">Developer</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero wrap">
+    <div class="hero-copy">
+      <p class="kicker"><span class="kicker-dot"></span>19 tools, one page, no sign-up</p>
+      <h1>Everyday tools, forged into one place.</h1>
+      <p class="lede">Anvil bundles the small utilities you keep re-searching for — text, study, conversion, and developer tools — into a single fast page that runs entirely in your browser.</p>
+      <div class="hero-actions">
+        <a href="#tools" class="btn btn-primary">Browse tools</a>
+        <a href="#developer" class="btn btn-ghost">Jump to developer tools</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>19</strong><span>tools included</span></div>
+        <div><strong>0</strong><span>signups required</span></div>
+        <div><strong>100%</strong><span>runs on-device</span></div>
+      </div>
+    </div>
+    <div class="hero-demo" aria-hidden="true">
+      <div class="hero-demo-bar">
+        <span></span><span></span><span></span>
+        <span class="label">case-converter.txt</span>
+      </div>
+      <div class="hero-demo-body">
+        <div class="hero-demo-input">the quick brown fox jumps</div>
+        <div class="hero-demo-output" id="heroDemoOutput"></div>
+        <div class="hero-demo-modes" id="heroDemoModes">
+          <span data-mode="upper">UPPERCASE</span>
+          <span data-mode="title">Title Case</span>
+          <span data-mode="camel">camelCase</span>
+          <span data-mode="snake">snake_case</span>
+          <span data-mode="kebab">kebab-case</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="tools-section wrap" id="tools">
+
+    <div class="category-block reveal" id="text">
+      <div class="category-head">
+        <h2>Text tools</h2>
+        <p>Shape and inspect writing</p>
+      </div>
+      <div class="card-grid" data-category="text"></div>
+    </div>
+
+    <div class="category-block reveal" id="study">
+      <div class="category-head">
+        <h2>Study tools</h2>
+        <p>Built for learning and memorization</p>
+      </div>
+      <div class="card-grid" data-category="study"></div>
+    </div>
+
+    <div class="category-block reveal" id="converters">
+      <div class="category-head">
+        <h2>Converters</h2>
+        <p>Move between units and number systems</p>
+      </div>
+      <div class="card-grid" data-category="converters"></div>
+    </div>
+
+    <div class="category-block reveal" id="generators">
+      <div class="category-head">
+        <h2>Generators</h2>
+        <p>Placeholder text, data, and names on demand</p>
+      </div>
+      <div class="card-grid" data-category="generators"></div>
+    </div>
+
+    <div class="category-block reveal" id="image">
+      <div class="category-head">
+        <h2>Image tools</h2>
+        <p>Client-side, nothing ever leaves your device</p>
+      </div>
+      <div class="card-grid" data-category="image"></div>
+    </div>
+
+    <div class="category-block reveal" id="fun">
+      <div class="category-head">
+        <h2>For fun</h2>
+        <p>Small decisions, made quickly</p>
+      </div>
+      <div class="card-grid" data-category="fun"></div>
+    </div>
+
+    <div class="category-block reveal" id="developer">
+      <div class="category-head">
+        <h2>Developer tools</h2>
+        <p>Formatting and validation while you work</p>
+      </div>
+      <div class="card-grid" data-category="developer"></div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="logo">
+      <span class="logo-mark" style="width:22px;height:22px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><path d="M3 16l4-4 10 10M14 3l7 7-3 3-7-7 3-3zM6 12L3 21l9-3"/></svg>
+      </span>
+      Anvil
+    </div>
+    <p class="footer-tag">Every tool runs locally in your browser. Nothing you type is sent anywhere.</p>
+    <div class="footer-links">
+      <a href="#top">Back to top</a>
+      <a href="#tools">All tools</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <div class="modal-head-title">
+        <span class="tool-icon" id="modalIcon"></span>
+        <h2 id="modalTitle"></h2>
+      </div>
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/tools.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
