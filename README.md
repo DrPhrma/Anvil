@@ -100,7 +100,3 @@ Every tool is one object in the `TOOLS` array in `js/tools.js`:
 ## Contributing
 
 Issues and pull requests are welcome. If you're adding a tool, keep it dependency-free and client-side only, matching the pattern above.
-
-## License
-
-[MIT](LICENSE) — use it, fork it, ship it.
