@@ -51,7 +51,7 @@ Every tab you keep for a case converter, a JSON formatter, a coin flip — one p
 ## Getting started
 
 ```bash
-git clone https://github.com/<your-username>/anvil.git
+git clone https://github.com/DrPhrma/anvil.git
 cd anvil
 python3 -m http.server 8000
 # open http://localhost:8000
